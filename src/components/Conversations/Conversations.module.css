@@ -1,0 +1,72 @@
+.conversations {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #fff;
+  padding: 14px 16px 16px 12px;
+  height: 600px;
+}
+
+.dialogs {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #fff;
+  padding-right: 20px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-left: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.form textarea{
+  padding: 6px;
+  font-size: 20px;
+  resize: none;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.form textarea:valid{
+  border: 1px solid #dcfffb;
+}
+
+.form textarea:invalid{
+  border: 1px solid #ffdcf4;
+}
+
+.form textarea:focus{
+  outline: none;
+}
+
+.submit_message {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.btn:hover {
+  color: #dcfffb;
+  border-color: #dcfffb;
+}

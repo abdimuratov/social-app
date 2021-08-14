@@ -1,0 +1,15 @@
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.profile-user-info-name {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.profile-user-info-item {
+  padding: 2px 0;
+}

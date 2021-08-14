@@ -1,0 +1,13 @@
+.avatar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.avatar img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}

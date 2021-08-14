@@ -1,0 +1,54 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.form textarea{
+  padding: 6px;
+  font-size: 20px;
+  resize: none;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.form textarea:valid{
+  border: 1px solid #E0F7FA;
+}
+
+.form textarea:invalid{
+  border: 1px solid #FCE4EC;
+}
+
+.form textarea:focus{
+  outline: none;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.submit_post {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.btn:hover {
+  color: #E0F7FA;
+  border-color: #E0F7FA;
+}

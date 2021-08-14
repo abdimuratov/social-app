@@ -1,0 +1,42 @@
+/* @font-face {
+  font-family: 'BigShouldersStencilDisplay';
+  font-weight: 400;
+  src: local('BigShouldersStencilDisplay'), url(./fonts/Big_Shoulders_Stencil_Display/BigShouldersStencilDisplay-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BigShouldersStencilDisplay';
+  font-weight: 700;
+  src: local('BigShouldersStencilDisplay'), url(./fonts/Big_Shoulders_Stencil_Display/BigShouldersStencilDisplay-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BigShouldersStencilDisplay';
+  font-weight: 900;
+  src: local('BigShouldersStencilDisplay'), url(./fonts/Big_Shoulders_Stencil_Display/BigShouldersStencilDisplay-Black.ttf) format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Jost', 'Arial', sans-serif;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background-color: #121212;
+}
+
+body button {
+  font-family: 'Jost', 'Arial', sans-serif;
+}
+
+body textarea {
+  font-family: 'Jost', 'Arial', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
