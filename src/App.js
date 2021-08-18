@@ -13,7 +13,7 @@ const App = () => {
       <div className="body_section">
         <Sidebar />
         <div className="body_container">
-          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/profile/" render={() => <Profile />} />
           <Route path="/conversations" render={() => <ConversationsContainer />} />
           <Route path="/users" render={() => <UsersContainer />} />
         </div>
