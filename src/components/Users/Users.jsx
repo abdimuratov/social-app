@@ -1,29 +1,28 @@
 import React from 'react'
 import styles from './Users.module.css'
-import * as axios from 'axios'
 import blankAvatar from '../../assets/images/blank-avatar.jpg'
-import { useEffect } from 'react'
 
 const Users = (props) => {
-  useEffect(() => {
-    axios.get('http://localhost:3040/users').then(({ data }) => {
-      props.setUsers(data)
-      console.log(data)
-    })
-  }, [])
-
   return (
     <div className={styles.container}>
       <div className={styles.pageSelector}>
-        {props.users && props.users.pages.map((page, index) => {
-          return (
-            <div
-              key={index} className={props.users.currentPage === page ? styles.selectedPage : ''}
-            >
-              {page}
-            </div>
-          )
-        })}
+        {props.users &&
+          props.users.pages.map((page, index) => {
+            return (
+              <button
+                key={index}
+                className={
+                  props.users.currentPage === page ? styles.selectedPage : ''
+                }
+                onClick={() => {
+                  props.setCurrentPage(page)
+                  console.log(page)
+                }}
+              >
+                {page}
+              </button>
+            )
+          })}
       </div>
       {!props.users && 'loading'}
       {props.users &&
