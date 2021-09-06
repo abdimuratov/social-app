@@ -62,11 +62,11 @@ const conversationsReducer = (state = initialState, action) => {
   }
 }
 
-export const sendMessageActionCreator = () => ({
+export const sendMessage = () => ({
   type: SEND_MESSAGE
 })
 
-export const updateNewMessageActionCreator = (text) => ({
+export const updateNewMessageText = (text) => ({
   type: UPDATE_NEW_MESSAGE_TEXT, newText: text
 })
 

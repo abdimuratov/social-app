@@ -1,17 +1,21 @@
 import './UserInfo.css'
 
-const UserInfo = () => {
+const UserInfo = (props) => {
+  if (!props.profile) {
+    return <div>OWAOWA</div>
+  }
+  
   return (
     <div className="profile-user-info">
       <div>
-        <div className="profile-user-info-name">Abdimurat Abyl</div>
+        <div className="profile-user-info-name">{props.profile.name}</div>
       </div>
       <div>
-        <div className="profile-user-info-item">Date of birth: 28february</div>
-        <div className="profile-user-info-item">City: Shymkent</div>
-        <div className="profile-user-info-item">Education: IITU</div>
+        <div className="profile-user-info-item">Date of birth: {props.profile.birthdate.day} {props.profile.birthdate.month}</div>
+        <div className="profile-user-info-item">City: {props.profile.location.city}</div>
+        <div className="profile-user-info-item">Education: {props.profile.education}</div>
         <div className="profile-user-info-item">
-          E-mail: abdimuratov8@gmail.com
+          E-mail: {props.profile.email}
         </div>
       </div>
     </div>

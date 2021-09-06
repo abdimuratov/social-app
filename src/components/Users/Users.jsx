@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Users.module.css'
 import blankAvatar from '../../assets/images/blank-avatar.jpg'
+import { NavLink } from 'react-router-dom'
 
 const Users = (props) => {
   return (
@@ -12,11 +13,10 @@ const Users = (props) => {
               <button
                 key={index}
                 className={
-                  props.users.currentPage === page ? styles.selectedPage : ''
+                  props.currentPage === page ? styles.selectedPage : ''
                 }
-                onClick={() => {
-                  props.setCurrentPage(page)
-                  console.log(page)
+                onClick={(e) => {
+                  props.onPageChange(page)
                 }}
               >
                 {page}
@@ -27,7 +27,7 @@ const Users = (props) => {
       {!props.users && 'loading'}
       {props.users &&
         props.users.data.map((user) => (
-          <div key={user.id} className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.action}>
               <img
                 src={user.avatarUrl != null ? user.avatarUrl : blankAvatar}
@@ -54,7 +54,9 @@ const Users = (props) => {
             </div>
             <div className={styles.info}>
               <div className={styles.personal_info}>
-                <div>{user.name}</div>
+                <NavLink to={'/profile/' + user.id} key={user.id}>
+                  <div>{user.name}</div>
+                </NavLink>
                 <div>{user.status}</div>
               </div>
               <div className={styles.location}>

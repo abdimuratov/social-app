@@ -1,7 +1,7 @@
 import Conversations from './Conversations'
 import {
-  sendMessageActionCreator,
-  updateNewMessageActionCreator,
+  sendMessage,
+  updateNewMessageText,
 } from '../../state/conversationsReducer'
 import { connect } from 'react-redux'
 
@@ -13,20 +13,9 @@ let mapStateToPops = (state) => {
   }
 }
 
-let mapDispatchToProps = (dispatch) => {
-  return {
-    sendMessage: () => {
-      dispatch(sendMessageActionCreator())
-    },
-    updateNewMessageText: (text) => {
-      dispatch(updateNewMessageActionCreator(text))
-    },
-  }
-}
-
 const ConversationsContainer = connect(
   mapStateToPops,
-  mapDispatchToProps
+  { sendMessage, updateNewMessageText }
 )(Conversations)
 
 export default ConversationsContainer
