@@ -9,8 +9,8 @@ const Profile = (props) => {
   }
   return (
     <div className="profile">
-      <div className="profile_user">
-        <Avatar avatarUrl={props.profile.avatarUrl} />
+      <div className="profile-user">
+        <Avatar avatarUrl={props.profile.photos.small} />
         <UserInfo profile={props.profile} />
       </div>
       <PostsContainer />

@@ -12,7 +12,7 @@ const ProfileContainer = (props) => {
       id = 2
     }
     axios
-      .get(`http://localhost:3040/users/${id}`)
+      .get(`https://social-network.samuraijs.com/api/1.0/profile/${id}`)
       .then(({ data }) => {
         props.setProfile(data)
       })

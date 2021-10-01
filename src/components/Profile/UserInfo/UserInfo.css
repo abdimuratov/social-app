@@ -1,15 +1,34 @@
 .profile-user-info {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.profile-user-info-leftCard {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: auto;
+  margin-left: 40px;
+}
+
+.profile-user-info-rightCard {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  align-items: flex-end;
+}
+
+.profile-user-info-rightCard a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.profile-user-info-rightCard a:hover {
+  color: cornflowerblue;
 }
 
 .profile-user-info-name {
   font-weight: 700;
   font-size: 24px;
-}
-
-.profile-user-info-item {
-  padding: 2px 0;
 }

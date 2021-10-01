@@ -32,6 +32,7 @@ const UsersContainer = (props) => {
   let pagesCounter = Math.ceil(props.totalUsers / props.usersPerPage)
   let firstPage = 1
   let lastPage = 1
+  
   if (props.currentPage > 3 && props.currentPage < pagesCounter - 3) {
     firstPage = props.currentPage - 2
     lastPage = props.currentPage + 2
