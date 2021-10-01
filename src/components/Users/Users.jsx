@@ -6,9 +6,9 @@ import { NavLink } from 'react-router-dom'
 const Users = (props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.pageSelector}>
-        {props.users &&
-          props.users.pages.map((page, index) => {
+      {/* <div className={styles.pageSelector}>
+        {props.pages &&
+          props.pages.map((page, index) => {
             return (
               <button
                 key={index}
@@ -23,18 +23,37 @@ const Users = (props) => {
               </button>
             )
           })}
+      </div> */}
+      <div className={styles.pageSelector}>
+        {props.pages &&
+          props.pages.map((page) => {
+            return (
+              <button
+                className={
+                  props.currentPage === page ? styles.selectedPage : ''
+                }
+                onClick={(e) => {
+                  props.onPageChange(page)
+                }}
+              >
+                {page}
+              </button>
+            )
+          })}
       </div>
       {!props.users && 'loading'}
       {props.users &&
-        props.users.data.map((user) => (
-          <div className={styles.item}>
+        props.users.map((user) => (
+          <div className={styles.item} key={user.id}>
             <div className={styles.action}>
               <img
-                src={user.avatarUrl != null ? user.avatarUrl : blankAvatar}
+                src={
+                  user.photos.small != null ? user.photos.small : blankAvatar
+                }
                 alt="avatar"
                 className={styles.avatar}
               />
-              {user.following ? (
+              {user.followed ? (
                 <button
                   onClick={() => {
                     props.unfollow(user.id)
@@ -54,14 +73,13 @@ const Users = (props) => {
             </div>
             <div className={styles.info}>
               <div className={styles.personal_info}>
-                <NavLink to={'/profile/' + user.id} key={user.id}>
+                <NavLink className={styles.name} to={'/profile/' + user.id}>
                   <div>{user.name}</div>
                 </NavLink>
-                <div>{user.status}</div>
-              </div>
-              <div className={styles.location}>
-                <div>{user.location.country}</div>
-                <div>{user.location.city}</div>
+                <div className={styles.status_section}>
+                  <div>Status:</div>
+                  <div className={styles.status}>{user.status}</div>
+                </div>
               </div>
             </div>
           </div>

@@ -51,10 +51,37 @@
 }
 
 .selectedPage {
-  text-decoration: underline;
+  font-size: large;
 }
 
 .pageSelector {
   display: flex;
   flex-direction: row;
+}
+
+.pageSelector button {
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.status_section {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+}
+
+.status {
+  font-size: inherit;
+  margin-left: 4px;
+}
+
+.name {
+  color: #fff;
+  text-decoration: none;
+}
+
+.name:hover {
+  text-decoration: underline;
 }

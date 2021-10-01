@@ -5,7 +5,7 @@ import PostsContainer from './Posts/PostsContainer'
 
 const Profile = (props) => {
   if(!props.profile) {
-    return <div>HOYA</div>
+    return <div>Something went wrong...</div>
   }
   return (
     <div className="profile">
